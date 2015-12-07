@@ -14,6 +14,8 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 
 ---
 
+<a name="hash_top" href="#hash_top"></a>
+
 **索引**
 
 1. [页面尺寸](#hash_size)
@@ -45,13 +47,13 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 
 ---
 
-<a name="hash_size"></a>
+<a name="hash_size" href="#hash_top">Top</a>
 
 ## 页面尺寸
 
 网页尺寸需要考虑浏览者的屏幕分辨率
 
-<a name="hash_size_min-width"></a>
+<a name="hash_size_min-width" href="#hash_top">Top</a>
 
 ### 最小宽度
 ![width-980](./media/width-980.png)
@@ -69,13 +71,13 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 
 ![](./media/maxthon.png)
 
-<a name="hash_responsive"></a>
+<a name="hash_responsive" href="#hash_top">Top</a>
 
 ### 响应式设计
 
 响应式设计规范可参考 [https://github.com/ColdXu/grid-design](https://github.com/ColdXu/grid-design)
 
-<a name="hash_retina"></a>
+<a name="hash_retina" href="#hash_top">Top</a>
 
 ### 移动设备 Retina
 
@@ -85,18 +87,18 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 
 > iphone6 DPI 是 375 所以此处 设计稿基准尺寸是 375px,如果要兼容 iphone4/4s/5 则基准是 320（设计稿尺寸是 640px）
 
-<a name="hash_font"></a>
+<a name="hash_font" href="#hash_top">Top</a>
 
 ## 字体
 
 在网页中使用字体需要注意一些地方
 
-<a name="hash_font-size"></a>
+<a name="hash_font-size" href="#hash_top">Top</a>
 
 ### 大小
 内容性质字体大小不得小于 12px ，因为某些浏览器默认文字大小只能是 12px。网页中显示小于 12px 的文字会变形。
 
-<a name="hash_font-special"></a>
+<a name="hash_font-special" href="#hash_top">Top</a>
 
 ### 特殊字体
 
@@ -108,20 +110,20 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 
 若使用英文特殊字体，请将字体文件同 PSD 一并交付给前端。
 
-<a name="hash_text-overflow"></a>
+<a name="hash_text-overflow" href="#hash_top">Top</a>
 
 ## 内容溢出
 
 某些文字由程序输出的文字长度是无法确认的，需要设计时考虑文字超出容器大小时候的溢出处理方式。
 
-<a name="hash_text-overflow-ddd"></a>
+<a name="hash_text-overflow-ddd" href="#hash_top">Top</a>
 
 ### ...
 
 > 当文字超过一定字数后会出现 `...`
 ![text-overflow](./media/text-overflow.png)
 
-<a name="hash_text-overflow-clip"></a>
+<a name="hash_text-overflow-clip" href="#hash_top">Top</a>
 
 ### 裁剪
 
@@ -131,11 +133,11 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 > 一行文字占 20px ，最多只显示1行，超过1行的文字不显示
 ![text-overflow-hidden-2](./media/text-overflow-hidden-2.png)
 
-<a name="hash_text-overflow-tip"></a>
+<a name="hash_text-overflow-tip" href="#hash_top">Top</a>
 
 ### 提示
 > 当鼠标划入时出现完整内容信息
 ![text-overflow-tip](./media/text-overflow-tip.png)
 
-<a name="hash_psd"></a>
+<a name="hash_psd" href="#hash_top">Top</a>
 
