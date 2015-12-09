@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iconfont</title>
+    <link rel="stylesheet" href="./s/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1449649820_3535497.css">
+<style>
+.aniamte-placeholder {
+  width:100px;
+  height: 100px;
+}
+.animate{
+  position:absolute;left:0px;top: 0;
+  animation:zoom 3s infinite;
+  -webkit-animation:zoom 3s infinite; /*Safari and Chrome*/
+}
+
+@keyframes zoom
+  {
+  0% {
+      margin-left:50px;
+      margin-top:50px;
+     color:orange;font-size:20px;
+  }
+  50% {
+    margin-left:0px;
+    color:#ABCDEF;font-size:100px;
+  }
+  100% {
+    margin-top:50px;
+    margin-left:50px;
+    color:orange;font-size:20px;
+  }
+}
+
+@-webkit-keyframes zoom 
+{
+  {
+  0% {
+     color:orange;font-size:20px;
+  }
+  50% {
+    color:#ABCDEF;font-size:100px;
+  }
+  100% {
+     color:orange;font-size:20px;
+  }
+}
+</style>
+</head>
+<body>
+<p>
+  <a class="btn btn-link" href="https://github.com/nimojs/web-design-notes#hash_font-icon">写给Web设计师的注意事项：字体图表</a>
+</p>
+在 Retina 屏下这些图标不会模糊
+<span class="iconfont icon-57 animate"></span>
+<div class="aniamte-placeholder"></div>
+<span class="iconfont icon-57" style="color:orange;" ></span>
+<span class="iconfont icon-57" style="color:pink;" ></span>
+<span class="iconfont icon-57" style="font-size:30px;" ></span>
+<span class="iconfont icon-59"></span>
+
+<span class="iconfont icon-58"></span>
+
+<span class="iconfont icon-60"></span>
+<hr>
+<span class="iconfont icon-57" style="font-size:80px;" ></span>
+<br>
+<img src="./s/img/iconimg.png" alt="">
+第二个图标是使用图片制作的，在 Retina 屏下显示会有点模糊,Reina屏手机扫码查看 <br>
+<img src="./s/img/iconfont-qrcode.png" alt="">
+<hr>
+<a href="http://iconfont.cn/">
+    <img src="s/img/iconfont.png" alt="">
+</a>
+<hr>
+</body>
+</html>
