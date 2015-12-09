@@ -2,8 +2,6 @@
 
 > Web 设计和 Web 前端都应该仔细阅读此文档，会减少因为设计不合理导致的返工。
 
-Web 设计和广告设计有很大区别。在视觉上广告设计只要颜色符合规范都可以100%打印出来。
-
 Web 设计因为要在浏览器中实现，有时还需要『动』起来，在设计时有一定的限制。
 
 **前端同行应该以此文档作为审核设计稿的依据，不应该拿到设计稿直接开发。**
@@ -25,16 +23,16 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 2. [字体](#hash_font)
 	1. [大小](#hash_font-size)
 	2. [特殊字体](#hash_font-special)
-	3. 字体图标
+	3. [字体图标](#hash_font-icon)
 3. [内容溢出](#hash_text-overflow)
 	1. [...](#hash_text-overflow-ddd)
 	2. [裁剪](#hash_text-overflow-clip)
 	3. [提示](#hash_text-overflow-tip)
 4. PSD
-	1. 图层命名
-	2. Retina
-	3. 标注
-	4. 字体
+	1. [图层命名](#hash_psd-layer-name)
+	2. [Retina](#hash_psd-retina)
+	3. [标注](#hash_psd-marker)
+	4. [字体](#hash_psd-font)
 5. 分页
 6. 状态
 	1. loading 加载中
@@ -109,9 +107,27 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 
 由于程序输出的文字不建议使用中文特殊字体，因为想要在用户电脑中使用中文特殊字体需要在浏览器中加载字体文件。而中文字体文件体积至少 1MB 以上
 
-推荐一个中文特殊字体生成平台，可以在不使用图片的情况下使用固定的少量文字。[WebFont](http://iconfont.cn/webfont/#!/webfont/index) 
+推荐一个中文特殊字体生成平台，可以在不使用图片的情况下使用固定的少量文字。[WebFont](http://iconfont.cn/webfont/#!/webfont/index) |  [浏览器使用示例](http://nimojs.github.io/web-design-notes/webfont.html)
 
 若使用英文特殊字体，请将字体文件同 PSD 一并交付给前端。
+
+<a name="hash_font-icon" href="#hash_top">Top</a>
+
+### 字体图标
+![](./media/iconfont.png)
+图标是网页中非常常见的元素，以前Web前端在实现时是通过图片实现。有如下缺点：
+
+1. Retina 屏下因为图片分辨率太低会导致图标模糊
+2. 图标多一种颜色就需要多切一张图（图片太多会增加页面访问时间）
+3. 图标多一种尺寸需要多切一张图
+
+**以上三个问题，用 iconfont 可以完美解决**
+
+请点击 [示例](http://nimojs.github.io/web-design-notes/iconfont.html) 查看使用 iconfont 显示图标的效果。
+
+[ICONFONT平台功能介绍](http://iconfont.cn/help/platform.html)
+
+> 除了 iconfont.cn 还有很多类似的平台
 
 <a name="hash_text-overflow" href="#hash_top">Top</a>
 
@@ -144,3 +160,45 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 
 <a name="hash_psd" href="#hash_top">Top</a>
 
+## PSD
+
+<a name="hash_psd-layer-name" href="#hash_top">Top</a>
+### 图层命名
+> 这一项不是必须的，但是想**成为优秀设计师**必须做到这一点
+
+<table>
+  <thead>
+  <tr>
+     <th>
+		结构清晰的命名
+     </th>
+     <th>
+		糟糕的命名
+     </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+     <td>
+		<img src="./media/psd-layer-name-good.jpg" />
+     </td>
+     <td>
+		<img src="./media/psd-layer-name-bad.jpg" />
+     </td>
+  </tr>
+  </tbody>
+</table>
+
+> 用中文命名也可以
+
+合理的命名会在设计复杂页面时能快速找到相关图层，Web前端同事在 PSD 中找到相关资源也更方便。
+
+<a name="hash_psd-retina" href="#hash_top">Top</a>
+### Retina
+欢迎提交 [issues](https://github.com/nimojs/web-design-notes/issues/new)或者 [New pull request](https://github.com/nimojs/web-design-notes/pulls)补充此章节
+
+<a name="hash_psd-marker" href="#hash_top">Top</a>
+### 标注
+
+<a name="hash_psd-font" href="#hash_top">Top</a>
+### 字体
