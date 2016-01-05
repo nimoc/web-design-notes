@@ -16,6 +16,8 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 
 **索引**
 
+[资源](#hash_collect)
+
 1. [页面尺寸](#hash_size)
 	1. [最小宽度](#hash_size_min-width)
 	2. [响应式设计](#hash_responsive)
@@ -28,18 +30,19 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 	1. [...](#hash_text-overflow-ddd)
 	2. [裁剪](#hash_text-overflow-clip)
 	3. [提示](#hash_text-overflow-tip)
-4. PSD
+4. [PSD](#hash_psd)
 	1. [图层命名](#hash_psd-layer-name)
 	2. [Retina](#hash_psd-retina)
 	3. [标注](#hash_psd-marker)
 	4. [字体](#hash_psd-font)
-5. 分页
-6. 状态
-	1. loading 加载中
-	2. Hover 滑过
-	3. error 加载出错
-	4. empty 元素为空（常见于列表）
-	5. 页面其他逻辑的状态（比如某些字段可选时候）
+5. 栅格化
+6. [状态](#hash_status)
+	1. [Loading](#hash_status-loading)
+	2. [hover](#hash_status-hover)
+	3. [error](#hash_status-error)
+	4. 页面其他逻辑的状态（比如某些字段可选时候）
+	5. 分页
+	6. 用户超时登出
 7. UI组件化
 8. typo 内容排版样式
 	1. 富文本编辑
@@ -49,6 +52,10 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 ---
 
 <a name="hash_size" href="#hash_top">Top</a>
+
+**资源**
+1. [标你妹~啊-一款自动标注软件](http://www.biaonimeia.com/)
+2. [微型设计专用工具Dorado](http://cdc.tencent.com/?p=3268)
 
 ## 页面尺寸
 
@@ -200,5 +207,89 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 <a name="hash_psd-marker" href="#hash_top">Top</a>
 ### 标注
 
+[![](./media/mark.png)](https://www.zhihu.com/question/27743708)
+
+非常棒的设计稿会将具体尺寸都标注出来，包括元素的一些状态。[标注工具 Dorado](http://cdc.tencent.com/?p=3268)
+并不是前端没有这个时间标注尺寸和颜色，而是当设计师对自己的设计稿进行标注后会有一个『检查』的过程。
+
+例如：
+![](./media/mark2.png)
+此处的标注是前端拿到设计稿后标注的。这里就会有个选择，箭头距边框距离是左41右43还是左右都42。
+
+我估计设计的实际想法是左右都是42，因为要对称。但由于设计的时候出现几像素的偏差，导致前端测量时尺寸不对。
+
+以上只是为了说明情况举的一个例子，实际开发过程中可能会遇到比这个例子更麻烦的问题。
+
+**如果设计同事对设计稿进行了标注工作，可以『检查』自己的设计稿**
+
 <a name="hash_psd-font" href="#hash_top">Top</a>
 ### 字体
+
+> 不是必须的
+
+若设计稿使用了特殊字体，建议提供设计稿时提供相应的字体文件。
+![](./media/font-chinese.png)
+
+## 栅格化
+
+<a name="hash_status" href="#hash_top" ></a>
+
+## 状态
+
+> 状态这一部分应该是给新手产品经理看的，但没有产品经理时设计应该注意状态的设计。
+
+网页并不是一张禁止的图片，它的内容会变化，这种变化对应不同的状态。设计时需要考虑到这些状态，成熟的团队产品原型中会说明对应的状态，没有原型的情况下，设计需要考虑好状态。
+
+<a name="hash_status-loading" href="#hash_top" ></a>
+
+### loading
+有些内容并不是页面打开就加在完成的，而是有一个 loading 的过程。
+
+<table>
+  <thead>
+  <tr>
+     <th>
+		鼠标划入开始加载
+     </th>
+     <th>
+		加载完成
+     </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+     <td>
+		<img src="./media/status-loading.png" />
+     </td>
+     <td>
+		<img src="./media/status-loadover.png" />
+     </td>
+  </tr>
+  </tbody>
+</table>
+
+需要 loading 是因为如果页面打开就提供所有的数据，页面的打开速度会很慢。而且这些数据不是必要数据，当用户鼠标划入的时候才需要显示，这样就可以当鼠标划入时浏览器向服务器请求数据后显示，请求的过程需要出现 loading 提示用户。
+
+<a name="hash_status-hover" href="#hash_top" ></a>
+
+### hover
+
+Web 页面很多地方都是需要与用户交互的，最常见的就是按钮。设计时需要考虑到按钮的几个状态：
+
+1. 默认（必须）
+2. 鼠标划入（非必须）
+3. 激活状态（非必须）
+4. 禁用状态（非必须）
+
+绝大部分按钮都需要设计鼠标划入状态。并在当前PSD或者设计说明PSD中展现出一个元素所有的状态
+
+<a name="hash_status-error" href="#hash_top" ></a>
+
+### error
+
+错误状态是web页面中是很常见的，一般是由产品经理在提供原型时候考虑到哪些部分会出现错误状态。没有原型的情况下，设计同事应该与开发同事沟通，以确定哪些地方存在错误状态。并在设计稿中体现出错误状态。
+![](./media/error.png)
+
+如果遗漏了错误状态的设计，并且前端审核设计稿时候也遗漏了错误状态的审核，那么会在后端同事拿到前端交付的代码时候让设计和前端返工添加错误状态，有可能就会因为返工而导致项目延期
+
+**数据为空也是一种状态，也需要在设计时就考虑到**
