@@ -40,14 +40,14 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 	1. [Loading](#hash_status-loading)
 	2. [hover](#hash_status-hover)
 	3. [error](#hash_status-error)
-	4. 页面其他逻辑的状态（比如某些字段可选时候）
-	5. 分页
-	6. 用户超时登出
-7. UI组件化
-8. typo 内容排版样式
-	1. 富文本编辑
-	2. markdown
-9. 技术团队审核设计稿
+	4. [分页](#hash_status-paging)
+	5. [用户超时登出](#hash_status-logout)
+7. [UI组件化](#hash_ui)
+	1. [图表](#hash_ui-charts)
+8. [typo 内容排版样式](#hash_typo)
+	1. [富文本编辑](#hash_typo-rich-text-editor)
+	2. [markdown](#hash_typo-markdown))
+9. [技术团队审核设计稿](#hash_everyone_checkout)
 
 ---
 
@@ -293,3 +293,106 @@ Web 页面很多地方都是需要与用户交互的，最常见的就是按钮�
 如果遗漏了错误状态的设计，并且前端审核设计稿时候也遗漏了错误状态的审核，那么会在后端同事拿到前端交付的代码时候让设计和前端返工添加错误状态，有可能就会因为返工而导致项目延期
 
 **数据为空也是一种状态，也需要在设计时就考虑到**
+
+
+<a name="hash_status-paging" href="#hash_top" ></a>
+
+### 分页
+
+设计页面时需要考虑内容是否存在多页情况，若存在多页则需设计出分页样式。常见于列表。
+![](https://cloud.githubusercontent.com/assets/3949015/7386863/150a781c-ee8b-11e4-91a3-ec686b565e50.gif)
+
+
+<a name="hash_status-logout" href="#hash_top" ></a>
+
+### 用户超时登出
+
+> 只有在页面停留时间长且单页操作交互频繁的业务场景下才需要考虑这一点，例如在线协同办公系统 [teambition](https://www.teambition.com/)
+
+用户打开A页面和B页面，在A中用户点击`退出登录`，用户状态变为`未登录`。或后端 [session](http://baike.baidu.com/link?url=r6TK_IE6WOaxtxG1FvtUp1Uvm7GT26sBmXdCaRDCzBdXWDX29aF2CqYN2gXN7rNtTvT55ck4nUfda2m7stN98q) 过期导致当前设备变为`未登录`状态时，用户继续操作需要登录的页面功能时会应该出现提示：
+![](./media/logout.png)
+或者提示当前用户未登录，请重新登录。
+
+<a name="hash_ui" href="#hash_top" ></a>
+
+## UI组件化
+
+设计一套符合当前项目的UI风格并在界面中复用，能提高界面的统一性和提高开发效率。国内做的好并开源的一些产品
+
+1. [支付宝 Alice](http://aliceui.org/)
+2. [蚂蚁金服 Ant](http://ant.design/)
+3. [百度产品线 GMU](http://gmu.baidu.com/)
+4. [百姓网 CMUI](http://cmui.net/)
+5. 此处省略
+
+---
+
+> Ant Design 是一个 UI 设计语言，是一套提炼和应用于企业级后台产品的交互语言和视觉体系。
+> 
+以 [Ant Design](http://ant.design/spec/font) 为例，这是一套蚂蚁金服团队基于自己产品所形成的一套 UI，已完成了设计阶段和前端实现阶段。蚂蚁金服基于这套 UI可以快速搭建页面并能保障界面统一。
+
+<a name="hash_ui-charts" href="#hash_top" ></a>
+
+### 图表
+
+若项目中需要使用图表，建议与前端沟通后再设计，图表实现非常复杂，建议使用一些成熟的开源库。[echarts](http://echarts.baidu.com/)
+
+<a name="hash_typo" href="#hash_top" ></a>
+
+## 内容排版
+
+如果项目设计到管理后台添加内容发布，则需要考虑内容排版。**这一点经常被所有开发人员遗漏，导致最终管理后台发布的内容样式简陋，反复调整返工**。
+
+内容排版的设计建议应该有**前端给出技术建议**，引导设计同事和决定管理后台使用何种编辑器
+
+一般管理后台的富文本编辑器分为两种，分别是
+
+1. 富文本编辑器
+2. markdown
+
+<a name="hash_typo-rich-text-editor" href="#hash_top" ></a>
+
+#### 富文本编辑器
+
+[富文本编辑器示例](http://ueditor.baidu.com/website/onlinedemo.html)
+
+> 前端可基于 [UEditor](http://ueditor.baidu.com/website/index.html) 实现富文本编辑器
+
+不建议使用富文本编辑器，因为他的样式完全是有编辑器嵌入样式决定的。若采取此方案设计不需要考虑太多。但会有很多无法预知的问题。
+
+<a name="hash_typo-markdown" href="#hash_top" ></a>
+
+#### markdown
+
+> Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+
+[markdown](http://baike.baidu.com/link?url=_XU2Jnvo9dqFrpHBF3TLauihJ4ot9pP4HWWXPMCLJq7k42zv7VzepFHVnYY_Zq4mi7a7gemRJNet3--ZjV8gC_) 
+
+我并不建议直接让编辑人员使用 markdown 语法，而是按照 markdown 的限制，让编辑器只提供 HTML 所有的标签样式。
+
+---
+
+[typo.css](http://typo.sofi.sh/)
+
+> 排版是一个麻烦的问题 # 附录一，需要精心设计，而这个设计却是常被视觉设计师所忽略的。前端工程师更常看到这样的问题，但不便变更。因为在多个 OS 中的不同浏览器渲染不同，改动需要多的时间做回归测试，所以改变变得更困难。而像我们一般使用的 Yahoo、Eric Meyer 和 Alice base.css 中采用的 Reset 都没有很好地考虑中文排版。typo.css 要做的就是解决中文排版的问题。
+
+markdown 编辑器实现可关注 [simditor打包版](https://github.com/nimojs/simditor-pack) 项目
+
+<a name="hash_everyone_checkout" href="#hash_top" ></a>
+
+## 技术团队审核设计稿
+
+外包项目和自由产品的设计稿审核方大都是客户和产品经理。很多团队技术人员不进行设计稿审核工作，这是非常错误的做法。
+
+技术团队审核设计稿可在开发初期发现问题，立即纠正。否则拿到设计稿闷头开始做会导致开发到最后一步发现设计稿有问题需要找到设计同事修改、前端同事重新开发。
+
+这是写给所有 Web 技术团队的每一个人的，也写给新手产品经理。
+
+1. 设计自审
+2. 产品经理审核
+3. 前端审核
+4. 后端审核
+
+---
+
+这里的每一节都是此文档维护者在团队中采坑一步步发现总结的经验，每次拿到设计稿按照此文档过一遍会减少很多无意义的返工。
