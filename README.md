@@ -319,11 +319,10 @@ Web 页面很多地方都是需要与用户交互的，最常见的就是按钮�
 
 设计一套符合当前项目的UI风格并在界面中复用，能提高界面的统一性和提高开发效率。国内做的好并开源的一些产品
 
-1. [支付宝 Alice](http://aliceui.org/)
-2. [蚂蚁金服 Ant](http://ant.design/)
-3. [百度产品线 GMU](http://gmu.baidu.com/)
-4. [百姓网 CMUI](http://cmui.net/)
-5. 此处省略
+1. [蚂蚁金服 Ant](http://ant.design/)
+2. [百度产品线 GMU](http://gmu.baidu.com/)
+3. [百姓网 CMUI](http://cmui.net/)
+4. 此处省略
 
 ---
 
