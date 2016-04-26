@@ -53,9 +53,6 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 
 <a name="hash_size" href="#hash_top">Top</a>
 
-**资源**
-1. [标你妹~啊-一款自动标注软件](http://www.biaonimeia.com/)
-2. [微型设计专用工具Dorado](http://cdc.tencent.com/?p=3268)
 
 ## 页面尺寸
 
@@ -221,6 +218,9 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 以上只是为了说明情况举的一个例子，实际开发过程中可能会遇到比这个例子更麻烦的问题。
 
 **如果设计同事对设计稿进行了标注工作，可以『检查』自己的设计稿**
+
+**资源**
+1. [微型设计专用工具Dorado](http://cdc.tencent.com/?p=3268)
 
 <a name="hash_psd-font" href="#hash_top">Top</a>
 ### 字体
