@@ -20,8 +20,9 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 
 1. [页面尺寸](#hash_size)
 	1. [最小宽度](#hash_size_min-width)
-	2. [响应式设计](#hash_responsive)
-	3. [移动设备 Retina](#hash_retina)
+	2. [手机页面尺寸](#hash_phonesize)
+	3. [响应式设计](#hash_responsive)
+	4. [移动设备 Retina](#hash_retina)
 2. [字体](#hash_font)
 	1. [大小](#hash_font-size)
 	2. [特殊字体](#hash_font-special)
@@ -76,6 +77,12 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 
 ![](./media/maxthon.png)
 
+<a name="hash_phonesize" href="#hash_top">Top</a>
+
+### 手机页面尺寸
+
+设计只需要按照 640 或 750 设计即可，前端会利用[rem](https://github.com/jieyou/rem_layout) 让设计稿占满屏幕
+
 <a name="hash_responsive" href="#hash_top">Top</a>
 
 ### 响应式设计
@@ -86,9 +93,9 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 
 ### 移动设备 Retina
 
-手持设备的设计稿基准尺寸为 375px，普通屏显示正常，但在 Retina 屏幕下会出现图片模糊问题。 
+手持设备的设计稿基准尺寸为 375px，普通屏显示正常，但在 Retina 屏幕下会出现图片模糊问题。
 
-对于 Retina 屏幕，为了达到高清效果，视觉稿的画布大小会是基准的2倍，最终设计稿尺寸是750px 
+对于 Retina 屏幕，为了达到高清效果，视觉稿的画布大小会是基准的2倍，最终设计稿尺寸是750px
 
 > iphone6 DPI 是 375 所以此处 设计稿基准尺寸是 375px,如果要兼容 iphone4/4s/5 则基准是 320（设计稿尺寸是 640px）
 
@@ -327,7 +334,7 @@ Web 页面很多地方都是需要与用户交互的，最常见的就是按钮�
 ---
 
 > Ant Design 是一个 UI 设计语言，是一套提炼和应用于企业级后台产品的交互语言和视觉体系。
-> 
+>
 以 [Ant Design](http://ant.design/spec/font) 为例，这是一套蚂蚁金服团队基于自己产品所形成的一套 UI，已完成了设计阶段和前端实现阶段。蚂蚁金服基于这套 UI可以快速搭建页面并能保障界面统一。
 
 <a name="hash_ui-charts" href="#hash_top" ></a>
@@ -365,7 +372,7 @@ Web 页面很多地方都是需要与用户交互的，最常见的就是按钮�
 
 > Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
 
-[markdown](http://baike.baidu.com/link?url=_XU2Jnvo9dqFrpHBF3TLauihJ4ot9pP4HWWXPMCLJq7k42zv7VzepFHVnYY_Zq4mi7a7gemRJNet3--ZjV8gC_) 
+[markdown](http://baike.baidu.com/link?url=_XU2Jnvo9dqFrpHBF3TLauihJ4ot9pP4HWWXPMCLJq7k42zv7VzepFHVnYY_Zq4mi7a7gemRJNet3--ZjV8gC_)
 
 我并不建议直接让编辑人员使用 markdown 语法，而是按照 markdown 的限制，让编辑器只提供 HTML 所有的标签样式。
 
