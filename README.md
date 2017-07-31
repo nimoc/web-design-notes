@@ -31,6 +31,7 @@ Web 设计因为要在浏览器中实现，有时还需要『动』起来，在�
 	1. [...](#hash_text-overflow-ddd)
 	2. [裁剪](#hash_text-overflow-clip)
 	3. [提示](#hash_text-overflow-tip)
+	4. [换行](#hash_text_newline)
 4. [PSD](#hash_psd)
 	1. [图层命名](#hash_psd-layer-name)
 	2. [Retina](#hash_psd-retina)
@@ -166,10 +167,12 @@ Github 页面最小宽度是 980px，当窗口大小小于 980px 时候会出现
 <a name="hash_text-overflow-tip" href="#hash_top">Top</a>
 
 ### 提示
+
 > 当鼠标划入时出现完整内容信息
 ![text-overflow-tip](./media/text-overflow-tip.png)
 
-<a name="hash_psd" href="#hash_top">Top</a>
+<a name="hash_text_newline" href="#hash_top">Top</a>
+
 
 ## PSD
 
